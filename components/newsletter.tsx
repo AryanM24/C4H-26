@@ -83,7 +83,10 @@ export const Newsletter = () => {
               }}
             >
               <div className="flex flex-col gap-4 w-full max-w-xl md:gap-6 lg:gap-8">
-                <motion.button
+                <motion.a
+                  href="https://forms.gle/z8M33qTyErHDxP6YA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex w-full rounded-full transition-[background-color,box-shadow] backdrop-blur-sm duration-200 ease-out bg-primary/20 shadow-sm ring-1 ring-transparent hover:bg-primary/30 hover:ring-1 hover:ring-primary/40 hover:ring-offset-4 hover:ring-offset-black/10 focus-visible:bg-primary/20 focus-visible:ring-1 focus-visible:ring-primary/40 focus-visible:ring-offset-4 focus-visible:ring-offset-black/10 disabled:cursor-not-allowed disabled:opacity-50 md:text-base text-white border-2 border-white/50 h-11 !text-base px-4 items-center justify-center font-medium gap-2" // Added gap-2 for spacing between text and arrow
                   initial={isInitialRender.current ? false : { opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -99,14 +102,10 @@ export const Newsletter = () => {
                     ease: EASE_OUT,
                     delay: DELAY,
                   }}
-                  onClick={() => {
-                    // Add your apply logic here
-                    console.log("Apply now clicked")
-                  }}
                 >
                   Apply now
                   <ArrowRight className="w-4 h-4" /> {/* Added arrow icon */}
-                </motion.button>
+                </motion.a>
 
                 <motion.p
                   initial={isInitialRender.current ? false : { opacity: 0 }}
